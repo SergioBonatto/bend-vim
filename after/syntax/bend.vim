@@ -24,6 +24,7 @@ syntax keyword  rsElse else
 syntax keyword  rsIf if
 syntax keyword  rsMatch match
 syntax keyword  rsMatch switch
+syntax keyword  rsMatch bend
 syntax match    rsIdentDef  'λ\s*'
 
 
