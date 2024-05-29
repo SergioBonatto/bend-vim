@@ -1,4 +1,22 @@
+# Bend-vim
+Syntax file highlight for Kind
+
+## Installation
+
+### On NeoVim
+Clone this repo and past the file "bend.vim" into `~/.config/nvim/syntax/bend.vim` and add in your `init.vim` file the next line:
+
+#### On NeoVim
+Clone this repo and past the folder "syntax" into `~/.config/nvim/` and add in your `init.vim` file the next line:
+
+### On VIM
+Clone this repo and past the file "bend.vim" into `~/.vim/syntax/bend.vim` and add in your `.vimrc` file the next line:
+
+```vim
+au BufRead,BufNewFile *.bend set filetype=bend
+au BufNewFile,BufRead *.bend set syntax  =bend
+```
+
+## Preview
 ![print](./Print.png)
 
-
-Special thanks to lunacookies for the original [`vim-rust-syntax-ext`](https://github.com/lunacookies/vim-rust-syntax-ext) project, which served as the foundation for adapting the syntax highlighting for `bend`. Your contribution has been crucial in making development with [`bend`](https://github.com/HigherOrderCO/Bend) more intuitive and productive. I apologize for not thanking you earlier; there was an issue with git that prevented me from identifying the original creator. Thank you very much, lunacookies!
