@@ -15,11 +15,10 @@ let b:current_syntax = "bend"
 
 " Function
 syntax match bendFunction '\<\a\w*\(\.\w\+\)*\s*\ze('
-" '\<\a\w*\(\.\w\+\)*\ze('
 syntax match bendFunction '[λ@][a-zA-Z0-9_]\+\(\s\|(\)'
 
 " Language keywords
-syntax keyword bendKeywords let open case with for in as switch type if then else def while when pass rewrite match bend 
+syntax keyword bendKeywords let open case for in as switch type if then else def when pass match bend 
 
 "Number literals
 syntax match bendNumber "\<[0-9]\+\>\|\<[0-9_]\+\>\|\<0[xX][0-9a-fA-F_]\+\>\|\<0[oO][0-7_]\+\>\|\<0[bB][10_]\+\>"
@@ -35,7 +34,7 @@ syntax region bendString start='"' end='"'
 syntax region bendString start='\'' end='\''
 
 " Specials
-syntax keyword bendSpecial nil cons one zero succ pred true false new empty tie e i o pos neg tail head fst snd lft rgt left right val
+syntax keyword bendSpecial nil cons one zero succ pred true false empty tail head fst snd lft rgt left right val
 
 " Type
 syntax match bendTypeNames "\<[A-Z][a-zA-Z0-9_']*\>"
