@@ -1,5 +1,5 @@
 # Bend-vim
-Syntax file highlight for Kind
+Syntax file highlight for Bend
 
 ## Installation
 
