@@ -15,7 +15,6 @@ let b:current_syntax = "bend"
 
 " Function
 syntax match bendFunction '\<\a\w*\(\.\w\+\)*\s*\ze('
-" '\<\a\w*\(\.\w\+\)*\ze('
 syntax match bendFunction '[λ@][a-zA-Z0-9_]\+\(\s\|(\)'
 
 " Language keywords
@@ -88,4 +87,3 @@ highlight default link bendAttribute      Keyword
 highlight default link bendDelimiter      Delimiter
 highlight default link bendUnusedFuncDef  bendFuncDef
 highlight default link bendUserStorage    Constant
-
