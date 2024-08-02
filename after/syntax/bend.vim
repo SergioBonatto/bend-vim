@@ -19,7 +19,7 @@ syntax match bendFunction '\<\a\w*\(\.\w\+\)*\s*\ze('
 syntax match bendFunction '[λ@][a-zA-Z0-9_]\+\(\s\|(\)'
 
 " Language keywords
-syntax keyword bendKeywords let open case with for in as switch type if then else def while when pass rewrite match bend 
+syntax keyword bendKeywords let open case with for in as switch type if then elif else def while when then pass rewrite match bend object 
 
 "Number literals
 syntax match bendNumber "\<[0-9]\+\>\|\<[0-9_]\+\>\|\<0[xX][0-9a-fA-F_]\+\>\|\<0[oO][0-7_]\+\>\|\<0[bB][10_]\+\>"
@@ -35,14 +35,14 @@ syntax region bendString start='"' end='"'
 syntax region bendString start='\'' end='\''
 
 " Specials
-syntax keyword bendSpecial nil cons one zero succ pred true false new empty tie e i o pos neg tail head fst snd lft rgt left right val
+syntax keyword bendSpecial lambda Nil Cons One Zero Succ pred true false new empty tie E I O pos neg tail head fst snd lft rgt left right val
 
 " Type
 syntax match bendTypeNames "\<[A-Z][a-zA-Z0-9_']*\>"
 
 " Comments
 syntax region bendCommentLine start="#" end="$"
-syntax region bendCommentLine start="//" end="$"
+" syntax region bendCommentLine start="//" end="$"
 
 " TODO
 syntax keyword bendTodo contained TODO FIXME XXX TBD NOTE
@@ -51,7 +51,7 @@ syntax match bendUnusedFuncDef '\v<_[a-z0-9_]+'
             \ contained
             \ nextgroup=bendTypeDefParams
 
-syntax keyword bendUserIdent def bend return let in  
+syntax keyword bendUserIdent def bend return let in
 syntax match bendUserStorage "(\s*\a\w*\s*\(,\s*\a\w*\s*\)*)"
 
 syntax match bendUserStorage ' \zs[a-zA-Z0-9_]\+\ze\s*='
